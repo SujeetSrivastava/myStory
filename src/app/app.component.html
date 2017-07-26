@@ -1,0 +1,151 @@
+<div class="container" style="border: 2px solid gray; font: 400 18px/1.2 'Merienda One', Helvetica, sans-serif; background-color:#f2f2f2">
+  <div class="row">
+    <div class="col-xs-12">
+      <div style="position: relative; bottom: 30px; width: 80%">
+        <h1 style="text-align: center; color:#70140d; position: relative; top:40px; left:120px; font: 400 60px/1.2 'Merienda One', Helvetica, sans-serif; text-shadow: 3px 3px 3px #fff;">My Life - My Story 
+          </h1>
+        <img [src]="'assets/images/sujeet.png'" alt="Hello" style="width: 100%; height: 100%; margin-left: 100px;">
+        <div style="position: relative; left: 120px; bottom: 500px; color:#FAFDF1; font: 300 22px/1.2 'Merienda One', Helvetica, sans-serif; line-height: 30px">
+          <b>NAME: </b> Sujeet Kumar Srivastava<br>
+          <b>NATIONALITY: </b>Indian<br>
+          <b>HOME TOWN: </b>Jaunpur<br>
+          <b>DATE OF BORN: </b>21 May 1980<br>
+          <b>Source of Bread and Butter: </b>Software Development<br>
+          <b>Hobby: </b>Sleeping<br>
+        </div>
+      </div>
+      <hr style="position: relative; bottom: 115px; border-bottom: 1px solid gray"/>
+      <div style="position: relative; bottom: 130px">
+      <button class="btn btn-primary" (click)="onPhase1Animate()">Phase 1</button>
+      <button class="btn btn-primary" (click)="onPhase2Animate()">Phase 2</button>
+      <button class="btn btn-primary" (click)="onPhase3Animate()">Phase 3</button>
+      </div>
+      <hr style="position: relative; bottom: 145px; border-bottom: 1px solid gray">
+        <div 
+          style="width: 80%; height: 100%; display: none; position: relative; bottom: 130px; text-align: justify;"
+          [@divState1]="stateP1"
+          (@divState1.start)="animationStarted($event)"
+          (@divState1.done)="animationEnded($event)">
+            <b>Childhood & Schooling:</b> 
+            <p>There is always something special about childhood, because it gives the shape of your character. It lays the foundation of your inner strength.</p>
+
+            <p>My Childhood begin with the bitter memory of loosing my father. My mother is a teacher and I am third in number out of four children. When I lost my father I was 4 year old so I missed being a little kid with no stress and worries in the world. I missed him throughout my childhood but then I choose to lookup my mother who at the very tender age 24 was left with four children to look after.His early departure from our life taught me the toughest lesson of my life from survival to achievement.</p>
+
+            <p>Amid all challenge I took up my primary and secondary education from small and humble school in Jaunpur...</p>
+            <br/>
+            <div>
+              <img
+              [src]="'assets/images/dad.jpg'" 
+              alt="father" 
+              style="width:21%; height: 21%; position: relative; left:120px"
+              >
+              <img
+              [src]="'assets/images/family.jpeg'" 
+              alt="family" 
+              style="width: 50%; height: 50%; position: relative; left:120px">
+
+              <br/>
+              <p style="position: relative; left:340px">( My Family in One Click)</p>
+            </div>    
+        </div>
+      <!--[@wildState]="wildState">-->
+         <div
+          style="width: 80%; height: 100%; display: none; position: relative; bottom: 130px; text-align: justify; "
+          [@divState2]="stateP2"
+          (@divState2.start)="animationStarted($event)"
+          (@divState2.done)="animationEnded($event)">
+            <b>Adolescence to Adulthood:</b> 
+            <p>By my experience I would say that this is a stage of self discovery. Around this time I was trying to sought the answers to bundle of questions related to my career and my future.</p>
+
+            <p>My elder brother played a major role in giving me the direction regarding how I am going to pursue my career. He was more like a teacher than a brother. I decided to explore my fortune in IIT. I remember having worked really hard and burnt midnight oil to crack IIT. But I failed :( in my attempt.</p>
+
+            <p>I was good at studies but could not crack IIT, some said your are destined to be somewhere else but I don't believe in destiny. For me destiny is the word for week and sort of cheap psychiatry to cover up one's failure, May be some lack of strategy that led me to failed outcomes.</p>
+            <p>I took the full responsibility, gathered strengths and moved on...</p>
+            <p>By chance I got my career in Computer Application. I completed my Bachelors from Lucknow & Masters from Apeejay College, greater Noida, India.</p>
+            <p>Very smoothly I cleared my Bachelors and Masters, but the battle within was on until I got my first break. </p>
+            <br/>
+            <div>
+              <img [src]="'http://www.apeejay.edu/aitsm/images/background.jpg'" alt="father" style="width: 80%; height: 80%;">
+            </div>
+            <br/>
+
+            <p> After some minor infatuations of early adulthood I got my destiny fixed in this one person to whom I refer to my better half as <b>Preeti</b>. I entered into a wedlock on 31st Jan, 2015.</p>
+            <p>In the span of two & half year of marriage I understood one thing that - </p><p style="font-weight: bold"><i> "Happy is the man who finds a true friend and far happier is who finds true friend in his wife. Its not a lack of love but lack of friendship that makes unhappy marriage"</i></p>
+            <br/>
+            <div>
+              <img
+                [src]="'assets/images/preeti.jpg'" 
+                alt="father" 
+                style="width:28%; height: 28%; position: relative; left:5px;"
+              >
+              <img
+                [src]="'assets/images/weding.jpg'" 
+                alt="father" 
+                style="width:50%; height: 50%; position: relative; left:10px"
+              >
+            </div>
+            <br/>
+            
+              <br/>
+              <br/>
+            <p>In Jan, 2016 I became a PROUD FATHER of a baby boy (<b>Advitya</b>). Apart from my regular Job and skills enhanchment I am learning Rhymes for my son :)<p>   
+              <br/>
+              <div>
+                <img
+                  [src]="'assets/images/adu3.jpeg'" 
+                  alt="father" 
+                  style="width:33%; height: 33%; position: relative; left:5px"
+                >
+                
+                <img 
+                [src]="'assets/images/adu1.jpg'" 
+                alt="father" 
+                style="width:18%; height: 18%; position: relative; left:10px"
+                >
+
+                <img
+                  [src]="'assets/images/adu4.jpeg'" 
+                  alt="father" 
+                  style="width:25%; height: 25%; position: relative; left:15px"
+                >
+              </div>
+ 
+        </div>
+
+        <div
+          style="width: 80%; height: 100%; display: none; position: relative; bottom: 130px "
+          [@divState3]="stateP3"
+          (@divState3.start)="animationStarted($event)"
+          (@divState3.done)="animationEnded($event)">
+            <b>Professional Journey:</b>
+            <p>In May, 2008, I got my first job in RateGain IT Solution, and from here on my professional journey begins. I worked here for almost 2 years and then shifted to ONICRA. </p>
+            <p>After serving around 1 year I got a offer from TSYS. From Nov, 2010 to Jun, 2016 I worked in TSYS. The journey was full of learning and enrichment in terms of knowledge and relationship with my superiors and colleagues. </p>
+              <img
+                [src]="'assets/images/tsysteam.jpg'" 
+                alt="father" 
+                style="width:40%; height: 40%; position: relative; left:10px"
+                >
+              <img  
+                [src]="'assets/images/tsysteammem.jpeg'" 
+                alt="father" 
+                style="width:27%; height: 27%; position: relative; left:10px"
+                >
+            <br/>
+            <br/>
+            <p>I delivered on many challenges that came across during various projects in productions. I consider my self fortunate to be a part of many trainings. Amongst many trainings I have participated in one of the most expensive trainings on TIBCO.</p>
+            <p>By mid of jun 2016 I joined Aleph team and relocated to Kuala Lumpur.</p>
+            <br/>
+            <br/>
+              <img [src]="'https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAJLAAAAJDBhYjliODM5LTZlODEtNDEwMS1iODAwLWIxMjlmNGQ4MDA2YQ.png'" alt="father" style="width: 20%; height: 20%;">
+              <img [src]="'https://media.glassdoor.com/sqll/506848/onicra-credit-rating-agency-squarelogo.png'" alt="father" style="width: 20%; height: 20%; ">
+              <img [src]="'http://www.xignite.com/img/forex/payment-logos/tsys-logo.png'" alt="father" style="width: 22%; height: 22%; background-color: white">
+              <img [src]="'https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAaIAAAAJDExOTE2NjRiLTQ4NGQtNDgzYi04NTFjLTU4OGQ5ZDc3MTc0YQ.png'" alt="father" style="width: 20%; height: 20%;">
+              <img [src]="'https://media.glassdoor.com/sqll/789971/aleph-labs-squarelogo-1496831650470.png'" alt="father" style="width: 20%; height: 20%; position: relative; left:760px; bottom:182px">
+            <br/>
+        </div>
+    </div>
+  </div>
+
+  <hr>
+ 
+</div>
