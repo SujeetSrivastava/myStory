@@ -15,7 +15,7 @@ import {
   animations: [
     trigger('divState1', [
       state('normal', style({
-        'background-color': 'lightgray',
+        'background-color': '#70140d',
         transform: 'translateX(0px)',
         display:'none'
       })),
@@ -24,12 +24,12 @@ import {
         transform: 'translateX(100px)',
         display:'block'
       })),
-      transition('normal <=> highlighted', animate(300)),
+      transition('normal <=> highlighted', animate(1000)),
       // transition('highlighted => normal', animate(800))
     ]),
     trigger('divState2', [
       state('normal', style({
-        'background-color': 'lightgray',
+        'background-color': '#70140d',
         transform: 'translateX(0)',
         display:'none'
       })),
@@ -38,12 +38,12 @@ import {
         transform: 'translateX(100px)',
         display:'block'
       })),
-      transition('normal <=> highlighted', animate(300)),
+      transition('normal <=> highlighted', animate(2000)),
       // transition('highlighted => normal', animate(800))
     ]),
     trigger('divState3', [
       state('normal', style({
-        'background-color': 'lightgray',
+        'background-color': '#70140d',
         transform: 'translateX(0)',
         display:'none'
       })),
@@ -52,7 +52,7 @@ import {
         transform: 'translateX(100px)',
         display:'block'
       })),
-      transition('normal <=> highlighted', animate(300)),
+      transition('normal <=> highlighted', animate(3000)),
       // transition('highlighted => normal', animate(800))
     ]),
     trigger('wildState', [
@@ -90,16 +90,16 @@ import {
           opacity: 0,
           transform: 'translateX(-100px)'
         }),
-        animate(300)
+        animate(5000)
       ]),
       transition('* => void', [
-        animate(300, style({
+        animate(1000, style({
           transform: 'translateX(100px)',
           opacity: 0
         }))
       ])
     ]),
-    trigger('list2', [
+    trigger(' 2', [
       state('in', style({
         opacity: 1,
         transform: 'translateX(0)'
@@ -147,7 +147,19 @@ export class AppComponent {
   stateP2 = 'normal';
   stateP3 = 'normal';
   wildState = 'normal';
-  list = ['Milk', 'Sugar', 'Bread'];
+  intoList = [{
+      key:'NAME', value:'Sujeet Kumar Srivastava:'
+    },{
+      key:'NATIONALITY', value: 'Indian'
+    },{
+      key:'CITY', value: 'JAUNPUR'
+    },{
+      key:'DATE OF BORN', value: '21 May 1980'
+    },{
+      key:'SOURCE OF BREAD & BUTTER', value: 'Software Development'
+    },{
+      key:'HOBBY', value: 'Knowladge sharing'
+    }];
   imgePath = "assets/images/baby.png";
   phase1=false;
   phase2=false;
@@ -173,11 +185,11 @@ export class AppComponent {
   }
 
   onAdd(item) {
-    this.list.push(item);
+    this.intoList.push(item);
   }
 
   onDelete(item) {
-    this.list.splice(this.list.indexOf(item), 1);
+    this.intoList.splice(this.intoList.indexOf(item), 1);
   }
 
   animationStarted(event) {
